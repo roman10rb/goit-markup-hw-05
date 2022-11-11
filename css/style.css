@@ -5,6 +5,7 @@
     --current-collor: #2196F3;
     --hover-color:#2196F3;
     --sub-prime-color-text: #757575;
+    --transition-effects: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -40,12 +41,8 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-
- .studia.current{
-    color: var(--current-collor)
-}
-.portfolio.current{
+ .studia.current,
+ .portfolio.current{
     color: var(--current-collor)
 }
 .container{
@@ -92,6 +89,22 @@ img {
     margin-left: 93px;
     gap: 50px;
 }
+.underline{
+    position: relative;
+}
+.current::after,
+.portfolio.current::after{
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--current-collor);
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+}
 .nav-list .nav-link{
     display: block;
     padding: 32px 0;
@@ -103,6 +116,7 @@ img {
     letter-spacing: 0.02em;
     text-decoration: none;
     color: inherit;
+    transition: var(--transition-effects)
 }
 .nav-link:hover,
 .nav-link:focus{
@@ -129,6 +143,8 @@ font-size: 14px;
 line-height: calc(16/14);
 letter-spacing: 0.02em;
  color: var(--sub-prime-color-text);
+
+transition: var(--transition-effects);
 }
 
 .ikon{
@@ -263,7 +279,8 @@ letter-spacing: 0.02em;
 
 /* -----------------НАША КОМАНДА------------------ */
 .ikon-team{
-    fill: #AFB1B8;
+    fill: #AFB1B8; 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-ikons{
     display: inline-flex;
@@ -276,14 +293,15 @@ letter-spacing: 0.02em;
     align-items: center;
     width: 44px;
     height: 44px;
-
 }
 .ikon-teams:hover .ikon-team{
     fill: white;
+   
 }
 .ikon-teams:hover{
-    background-color: #2196F3;
+    background-color:var(--hover-color);
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team{
     padding-top: 94px;
@@ -355,12 +373,14 @@ padding: 30px;
     border: 1px solid rgba(175, 177, 184, 1);
     border-radius: 4px;
     fill: #AFB1B8;
+    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ikon-clients:hover,
 .ikon-clients:focus{
     fill: #2196F3;
-    border-color: #2196F3;
-    color: #2196F3;
+    border-color: #2196F3;  
 }
 
 .clients-title {
@@ -460,6 +480,7 @@ padding: 30px;
 .footer-link > .ikon-teams{
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:hover >.ikon-teams{
     background-color: #2196F3;
@@ -485,6 +506,8 @@ padding: 30px;
 .project-item{
     width: 370px;
     margin: 15px;
+    
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-alltext{
@@ -494,11 +517,9 @@ padding: 30px;
     border-top: none;
 }
 
-
-
 .project-item:hover,
 .project-item:focus {
-    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12); 
 }
 
 .project-alltext{
@@ -514,15 +535,17 @@ padding: 30px;
     font-size: 16px;
     line-height: calc(26/16);
     text-align: center;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.03em; 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-button:hover,
 .portfolio-button:focus{
     background: #2196F3;
     color: #FFFFFF;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 /* --------------ПРИКЛАДИ ПРОЕКТІВ---------------- */
