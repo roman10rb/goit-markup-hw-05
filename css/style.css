@@ -572,8 +572,7 @@ padding: 30px;
 
 .techno-container{
     position: relative;
-    overflow: hidden;
-    
+    overflow: hidden;  
 }
 .techno-text{
     position: absolute;
