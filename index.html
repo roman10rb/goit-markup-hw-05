@@ -17,6 +17,13 @@
             rel="stylesheet">
     </head>
     <body>
+        <div data-modal class="backdrop is-hidden "> 
+            <div class="modal">
+                <button data-modal-close type="button" class="backdrop-button button"><svg class="icon-close-ikon" width="18" height="18">
+                    <use href="./images/hw4/symbol-defs.svg#icon-close-ikon"></use>
+                </svg></button>
+            </div>
+        </div>
         <header class="header">
             <div class="container header-nav">
                  <a href="./index.html" lang="en" class="logo"> <span class="logo-web"> Web</span><span class="logo-studio">Studio</span></a>
@@ -45,7 +52,7 @@
             <section class="hero">
                 <div class="container">
                  <h1 class="hero-title">Ефективні рішення для <br> вашого бізнесу</h1>
-                <button type="button" class="hero-button button">Замовити послугу</button>
+                <button data-modal-open type="button" class="hero-button button">Замовити послугу</button>
             </div>
             </section>
                 <!-- ОСОБЛИВОСТІ -->
@@ -93,9 +100,9 @@
                 <div class="container">
                      <h2 class="about-title title">Чим ми займаємося</h2>
                 <ul class="about-list list">
-                    <li class="about-item"><img src="./images/hw1/img(1).jpg" width="370" height="294" alt="Руки на клавіатурі"></li>
-                    <li class="about-item"><img src="./images/hw1/img(2).jpg" width="370" height="294" alt="Тримає телефон"></li>
-                    <li class="about-item"><img src="./images/hw1/img(3).jpg" width="370" height="294" alt="Тримає планшет"></li>
+                    <li class="about-item"><div class="img-container"><img src="./images/hw1/img(1).jpg" width="370" height="294" alt="Руки на клавіатурі"><p class="img-text">Десктопні додатки</p></div></li>
+                    <li class="about-item"><div class="img-container"><img src="./images/hw1/img(2).jpg" width="370" height="294" alt="Тримає телефон"><p class="img-text">Мобільні додатки</p></div></li>
+                    <li class="about-item"><div class="img-container"><img src="./images/hw1/img(3).jpg" width="370" height="294" alt="Тримає планшет"><p class="img-text">Дизайнерські рішення</p></div></li>
                 </ul>
                 </div>
             </section>
@@ -297,10 +304,6 @@
             </ul></div>
         </div>
         </footer>  
-        <div class="backdrop">
-            <div class="modal">
-                
-            </div>
-        </div>
+        <script src="./js/modal.js"></script>
 </body>
 </html>
